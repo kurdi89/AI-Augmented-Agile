@@ -215,13 +215,180 @@ Deployment: Self-hosted with Docker Compose
 
 8. **Result**: Complete, production-ready blog platform with documentation
 
+---
+
+# Using with Cline (VS Code Extension)
+
+## Overview
+Cline is a powerful VS Code extension that provides enhanced AI assistance with direct file system access. This section shows you how to use the Multi-Agent SDLC System with Cline for automatic file creation and management.
+
+## Quick Start with Cline
+
+### 1. Set Up Cline in VS Code
+1. Install the Cline extension from the VS Code marketplace
+2. Open VS Code in your project workspace
+3. Open the Command Palette (Ctrl+Shift+P / Cmd+Shift+P)
+4. Type "Cline: Open" and select it
+5. In the Cline interface, click on the settings/configuration icon
+6. Copy the entire content from `multi-agent-synthesis/CLINE_AGENT_PROMPT.md`
+7. Paste it into the Custom Instructions field
+8. Save the configuration
+
+### 2. Activate the Multi-Agent System in Cline
+Simply provide a project request in the same format:
+```
+Build me a [PROJECT_TYPE] called "[PROJECT_NAME]" that [BRIEF_DESCRIPTION].
+Requirements: [SPECIFIC_REQUIREMENTS]
+Tech Stack: [PREFERRED_TECHNOLOGIES]
+```
+
+### 3. Cline-Specific Advantages
+
+**Enhanced File Management**:
+- Cline will automatically create all project files and directories
+- Real-time file creation with progress tracking
+- Automatic validation of created files
+- Terminal integration for package installation and testing
+
+**Interactive Development**:
+- Files are created directly in your VS Code workspace
+- You can see and edit files as they're being created
+- Immediate access to created code for review and testing
+- Integrated terminal for running commands
+
+**Advanced Capabilities**:
+- Automatic package.json creation and dependency management
+- Git repository initialization when appropriate
+- Environment setup and configuration
+- Test execution and validation
+
+### 4. Cline Workflow Example
+
+**When you request a project, Cline will**:
+
+1. **Phase 1 - Requirements** (Automatic file creation):
+   ```
+   ✅ Creating Projects/[PROJECT_NAME]/01_Requirements/
+   ✅ Generated Project_Brief.md
+   ✅ Generated PRD.md
+   ✅ Generated PRD_Approval_Form.md
+   ```
+
+2. **Phase 2 - Architecture** (After your approval):
+   ```
+   ✅ Creating Projects/[PROJECT_NAME]/02_Architecture/
+   ✅ Generated TDD.md
+   ✅ Generated System_Architecture.md
+   ✅ Generated UIUX_Spec.md
+   ✅ Generated API_Specifications.md
+   ```
+
+3. **Phase 3 - Implementation** (After your approval):
+   ```
+   ✅ Creating Projects/[PROJECT_NAME]/03_Implementation/
+   ✅ Setting up Source_Code/ directory
+   ✅ Installing dependencies...
+   ✅ Generating application code...
+   ✅ Creating test files...
+   ✅ Setting up deployment scripts...
+   ```
+
+### 5. Cline-Specific Best Practices
+
+**File Management**:
+- All files are created automatically in your workspace
+- Review files as they're created in VS Code
+- Use VS Code's built-in Git integration for version control
+- Leverage VS Code's terminal for testing and deployment
+
+**Development Flow**:
+- Files are created incrementally with validation
+- You can modify files during the process
+- Use VS Code's IntelliSense and debugging features
+- Test code immediately as it's generated
+
+**Quality Assurance**:
+- Cline validates each file after creation
+- Automatic syntax checking and formatting
+- Integration with VS Code's linting and error detection
+- Real-time feedback on code quality
+
+### 6. Troubleshooting Cline Setup
+
+**If Cline doesn't respond properly**:
+- Ensure you've installed the latest version of Cline
+- Check that the custom instructions are properly saved
+- Restart VS Code and try again
+- Verify your workspace has write permissions
+
+**If files aren't being created**:
+- Check VS Code's file explorer for the Projects/ directory
+- Ensure your workspace has sufficient disk space
+- Verify file permissions in your workspace
+- Check the Cline output for any error messages
+
+**If you need to modify the system**:
+- Edit the prompt in `multi-agent-synthesis/CLINE_AGENT_PROMPT.md`
+- Update the custom instructions in Cline
+- Restart the conversation to apply changes
+
+### 7. Cline vs Cursor Comparison
+
+| Feature | Cline (VS Code) | Cursor |
+|---------|----------------|---------|
+| File Creation | Automatic, real-time | Manual review required |
+| IDE Integration | Native VS Code features | Cursor-specific features |
+| Extension Ecosystem | Full VS Code extensions | Cursor extensions |
+| Debugging | VS Code debugger | Cursor debugger |
+| Git Integration | VS Code Git tools | Cursor Git tools |
+
+**Choose Cline when you want**:
+- Automatic file creation and management
+- Full VS Code ecosystem and extensions
+- Integrated terminal and debugging
+- Real-time code validation and testing
+
+**Choose Cursor when you want**:
+- Cursor's specific AI features
+- Cursor's code completion and suggestions
+- Cursor's collaborative features
+- Cursor's optimized AI workflow
+
+### 8. Cline Example Project Requests
+
+**Full-Stack Web Application**:
+```
+Build me a full-stack task management app called "TaskMaster" that helps teams collaborate on projects.
+Requirements: User authentication, project creation, task assignment, real-time updates, notifications
+Tech Stack: React, Node.js, Express, MongoDB, Socket.io
+```
+
+**Mobile-First Progressive Web App**:
+```
+Build me a mobile-first PWA called "FitTracker" for fitness tracking and workout planning.
+Requirements: Offline capability, workout logging, progress tracking, social features
+Tech Stack: Vue.js, PWA, IndexedDB, Chart.js
+```
+
+**Enterprise Dashboard**:
+```
+Build me an enterprise analytics dashboard called "DataViz" for business intelligence.
+Requirements: Data visualization, user roles, export functionality, real-time updates
+Tech Stack: Angular, TypeScript, D3.js, PostgreSQL, Docker
+```
+
 ## Support
 
-For questions or issues:
-- Check the system documentation in `multi-agent-synthesis/Knowledge_Repository/`
 - Review agent specifications in `multi-agent-synthesis/Agents/`
 - Examine templates and examples in `multi-agent-synthesis/Templates/`
 
+
+## to start :
+
+- Clone this repo anywhere on your computer
+- Follow the steps above and start your projects
+- Find your projects built inside the `Projects/` folder 
+
 ---
 
-**Ready to build your next project with the Multi-Agent SDLC System!** 
+**Ready to build your next project with the Multi-Agent SDLC System!**
