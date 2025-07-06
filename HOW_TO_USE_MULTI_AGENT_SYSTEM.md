@@ -19,6 +19,7 @@ Build me a [PROJECT_TYPE] called "[PROJECT_NAME]" that [BRIEF_DESCRIPTION].
 Requirements: [SPECIFIC_REQUIREMENTS]
 Tech Stack: [PREFERRED_TECHNOLOGIES]
 ```
+_You can ignore the tech stack and keep to the design phase with the Solution Arch. to decide_
 
 ### 3. Example Project Requests
 
